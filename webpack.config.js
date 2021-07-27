@@ -13,6 +13,11 @@ module.exports ={
     module: {
         rules: [
           {
+            test: /\.js$/,
+            enforce: 'pre',
+            use: ['source-map-loader'],
+          },
+          {
             test: /\.m?js$/,
             exclude: /(node_modules|bower_components)/,
             use: {
@@ -44,6 +49,15 @@ module.exports ={
           {
             test: /\.css$/i,
             use: ["style-loader", "css-loader"],
+          },
+
+          {
+            test: /\.(png|jpe?g|gif)$/i,
+            use: [
+              {
+                loader: 'file-loader',
+              },
+            ],
           }
 
         ]
@@ -54,7 +68,7 @@ module.exports ={
       })],
 
       devServer: {
-        contentBase: path.join(__dirname, 'src/App/index.js'),
+        contentBase: path.join(__dirname, 'src/App/'),
         compress: true,
         port: 9000,
       }
