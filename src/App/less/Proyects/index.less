@@ -1,0 +1,113 @@
+@import './Others_proyects.less';
+@import './Conocimientos.less';
+
+
+.article{
+    width: 90%;
+    min-height: 100vh;
+    height: auto;
+    margin: auto;
+
+
+    .article_proyects{
+        width: 100%;
+        .flex(row,wrap,center,flex-start);
+
+        .cont_text{
+            width: 45%;
+            p:first-child{
+                color:@blue-light;
+                font-size: 30px;
+                font-weight: 300;
+            }
+
+            h5{
+                color:@blue;
+                font-size: 22px;
+                font-weight: bold;
+                margin: 0;
+            }
+
+            p:last-child{
+                margin-top: 4px;
+                font-weight: 300;
+                font-size: 21px;
+                color :@grey;
+            }
+
+        }
+
+        .cont_img{
+            width: 55%;
+
+            display :grid;
+            grid-template-columns: repeat(2,minmax(100px,360px));
+            grid-template-rows: repeat(2,minmax(100px,269px));
+            grid-gap: 20px;
+
+            align-items: center;
+            justify-content: center;
+
+            button{
+                width: 100%;
+                height: 100%;
+                border: none;
+                background: none;
+                cursor: pointer;
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+
+            }
+
+            button:first-child{
+                grid-column: 1/2;
+                grid-row: 1/3;
+            }
+
+
+
+        }
+
+    }
+
+
+
+}
+
+
+@media (max-width:1000px){
+
+
+    .article{
+        height: auto;
+        min-height: auto;
+
+        .article_proyects{
+            .cont_text{
+                width: 100%;
+            }
+
+            .cont_img{
+
+                width: 100%;
+                grid-template-columns: repeat(auto-fill,max(270px ));
+                grid-template-rows: repeat(2,max(200px) );
+                margin-bottom: 50px;
+
+                button:first-child{
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                }
+
+            }
+        }
+
+    }
+
+
+
+}
+
+
