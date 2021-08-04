@@ -1,5 +1,6 @@
 import React from 'react';
 import {useState,useEffect} from 'react';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import UserImg from '../../img/Img.png';
 
@@ -7,12 +8,12 @@ import UserImg from '../../img/Img.png';
 export default function Header(){
 
     return(
-        <header className='header'>
+        <header className='header' id='index'>
             {<Navbar />}
 
 
 
-                <div className='header_info'>
+                <div className='header_info' >
 
                     <div className='content_info'>
                         <h1>Titulodas dasdasdasd</h1>
@@ -59,6 +60,10 @@ function Navbar(){
 
         })
 
+        const buttonOff =()=>{
+            document.getElementById('boton').checked = false
+        }
+
 
         return(
             <nav className='navbar'>
@@ -83,10 +88,14 @@ function Navbar(){
 
 
                     <div className='content' id='nav_content'>
-                        <a href='#'>Inicio</a>
-                        <a href='#'>Proyectos</a>
-                        <a href='#'>Contacto</a>
+                        <Link to='index'  activeClass="active" smooth={true} duration={500} spy={true} name='Inicio'>Inicio</Link>
+                        <Link to='proyects' activeClass="active" smooth={true} duration={500} spy={true}>Proyectos</Link>
+                        <Link to='contact' activeClass="active" smooth={true} duration={500} spy={true}>Contacto</Link>
                     </div>
+
+
+                {count?  <div onClick={(e)=>{navbar(false);buttonOff()}} className='opacity'></div> :false}
+                
 
             </nav>
         )

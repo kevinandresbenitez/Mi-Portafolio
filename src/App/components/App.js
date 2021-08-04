@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState} from 'react';
 
+import Header from './Header';
+import {PageLoader} from './PageLoader';
 import Modal from './Modal'
 import Proyects from './Proyects';
 import Others_proyects from './Proyects/Others_proyects.js';
@@ -8,7 +10,6 @@ import Contact from './Contact';
 import Footer from './Footer';
 
 
-import Header from './Header';
 
 import 'animate.css';
 import 'normalize.css';
@@ -69,8 +70,8 @@ export default function App (){
             if(obj.id == id){
                 return (obj);
             }
-
         }); 
+        
         if( typeProyect != Typedetails || (typeProyect == Typedetails && detailsProyects[0].id != details.id )  ){
             setDetails(detailsProyects[0]);
         }
@@ -83,13 +84,14 @@ export default function App (){
     return(
 
         <div>
-            <Header/>
-
             {Showdetails && details ? <Modal offDetails={offDetails}>{details}</Modal>:false}
 
-            <Proyects Details={Details}>{allProyect.first_proyects}</Proyects>
-            <Others_proyects Details={Details} >{allProyect.Others_proyects}</Others_proyects>
-
+            <Header/>
+            <PageLoader />
+            <div id='proyects'>
+                <Proyects Details={Details}>{allProyect.first_proyects}</Proyects>
+                <Others_proyects Details={Details} >{allProyect.Others_proyects}</Others_proyects>
+            </div>
 
             <Contact />
             <Footer />

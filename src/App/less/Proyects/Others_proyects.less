@@ -26,8 +26,24 @@
                 flex-flow: row wrap;
                 min-width: 270px;
                 max-width: 300px;
-                background: #ffff;
+
+                border-radius: 0px;
+                background: #fcf7f7;
+                box-shadow:  7px 7px 14px #bab7b7,
+                             -7px -7px 14px #ffffff;
                 cursor:pointer;
+                transition: all 0.3s;
+
+                &:hover{
+                    background: #fcf7f7;
+                    box-shadow:  19px 19px 38px #ccc8c8,
+                                -19px -19px 38px #ffffff;      
+                }
+
+                &:hover .img_item {
+                    filter: contrast(50%);
+                }
+
 
                 .img_item{
                     width: 100%;
@@ -41,7 +57,7 @@
                 }
 
                 .info_item{
-                        margin: 10px 0px;                    
+                        margin: 10px 5px;                    
                     h5{
                         color:@blue;
                         font-size: 22px;

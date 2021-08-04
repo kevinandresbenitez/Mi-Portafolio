@@ -1,9 +1,12 @@
 import React from 'react';
 import ImgUser from '../../img/Img.png';
 
+
+
+
+
 export default function Proyects (props){
-
-
+    
     return(
         <article  className='article'>
 
@@ -13,7 +16,7 @@ export default function Proyects (props){
             </div>
             
             <h2>Mis Proyectos</h2>
-
+            <div className='item'></div>
 
             <div className='article_proyects'>
 
@@ -27,8 +30,8 @@ export default function Proyects (props){
 
                     {props.children.map((obj,key)=>{
                         return(
-                            <button key={key} onClick={()=>{props.Details('first_proyects',obj.id)}}>
-                                <img src={ImgUser} />
+                            <button className='item' key={key} onClick={()=>{props.Details('first_proyects',obj.id)}}>
+                                <img src={ImgUser} draggable='false' />
                             </button>
                         )
                     })}

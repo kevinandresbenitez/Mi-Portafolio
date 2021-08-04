@@ -2,42 +2,96 @@
     width: 100%;
     height: 100%;
     position: fixed;
+
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
 
 
-    z-index: 2;
+    z-index: 10;
     background: rgba(61, 45, 45, 0.493);
-
     .flex(row,wrap,center,center);
 
-
-    .modal{
+    .modal{        
         width: 80%;
+        height: 80%;
         max-width: 1000px;
         position: relative;
-        height: 80%;
         z-index: 3;
         background: #ffff;
 
+        .flex(row,wrap,space-around,center);
 
         .close_button{
             position: absolute;
             top: 5px;
             right:5px;
+
             border :none;
-            border-radius: 50%;
             cursor: pointer;
-            padding: 5px 9px;
-            background: lightcoral;
-
-            transition: background 0.3s;
-
+            background: #ffff;
+            padding: 5px 8px;
+            border-radius: 50%;
+            transition: all 0.3s;
+            outline: none;
+            
+            
             &:hover{
-
+                border-radius: 50%;
+                background: rgba(54, 43, 43, 0.712);
+                transform: rotate(360deg);
             }
+
+            &:hover *>{
+                color: white;
+            }
+
+            *>{                
+                border-radius: 50%;
+                transition: all 0.3s;
+            }
+
+
         }
+
+        .modal_img{
+            width: 50%;
+            height: 100%;
+        }
+
+        .modal_info{
+            overflow-y: auto;
+            width: 50%;
+            height: 100%;
+        }
+
+    }
+}
+
+@media(max-width:800px){
+    .modal_content{
+        .modal{
+            
+            .modal_img{
+                width: 100%;
+                height: 35%;
+            }
+
+            .modal_info{
+                width: 100%;
+                height: 65%;
+            }
+
+        }
+    }
+}
+
+@media(max-width:350px){
+    .modal_content{
+        .modal{
+            width: 90%;
+        }
+
     }
 }

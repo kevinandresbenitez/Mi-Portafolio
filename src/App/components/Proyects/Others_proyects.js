@@ -4,7 +4,7 @@ import ImgUser from '../../img/Img.png';
 export default function OthersProyects (props){
 
     return(
-        <article  className='article'>
+        <article  className='article '>
 
             <div className='article_header_info'>
                 <strong>OTROS PROYECTOS</strong>
@@ -26,7 +26,7 @@ export default function OthersProyects (props){
                         return(
                     <button key={key} className='item' onClick={()=>{props.Details('Others_proyects',obj.id)}}>
                         <div className='img_item'>
-                            <img src={ImgUser}></img>
+                            <img src={ImgUser} draggable='false'></img>
                         </div>
                         <div className='info_item'>
                             <h5>Result</h5>
@@ -42,7 +42,7 @@ export default function OthersProyects (props){
                 
             </div>
 
-            <h2>Conocimientos</h2>
+            <h3>Conocimientos</h3>
 
             <div  className='Conocimientos'>        
 
