@@ -1,12 +1,11 @@
 import React from 'react';
-import ImgUser from '../../img/Img.png';
-
 
 
 
 
 export default function Proyects (props){
-    
+
+
     return(
         <article  className='article'>
 
@@ -15,10 +14,10 @@ export default function Proyects (props){
                 <div></div>
             </div>
             
-            <h2>Mis Proyectos</h2>
+            <h2 >Mis Proyectos</h2>
             <div className='item'></div>
 
-            <div className='article_proyects'>
+            <div className='article_proyects' >
 
                 <div className='cont_text'>
                     <p>A short blurb about a relevant hobby to design, career, or something work related that transferred to your job.</p>
@@ -30,22 +29,18 @@ export default function Proyects (props){
 
                     {props.children.map((obj,key)=>{
                         return(
-                            <button className='item' key={key} onClick={()=>{props.Details('first_proyects',obj.id)}}>
-                                <img src={ImgUser} draggable='false' />
+                            <button className='item'  key={key} onClick={()=>{props.Details('first_proyects',obj.id)}}>
+                                <img src={obj.img} draggable='false' />
                             </button>
                         )
                     })}
-  
+                    
                 </div>
 
             </div>
 
-
-
-
-
-
         </article>
+        
     )
 
 

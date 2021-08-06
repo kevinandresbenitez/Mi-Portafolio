@@ -30,11 +30,31 @@ export default function Modal(props){
                 </button>
 
                 <div className='modal_img'>
-
+                    <img src={props.children.img}></img>
                 </div>
 
                 <div className='modal_info'>
-                    {props.children.id}
+                    <div>
+                        <h3>{props.children.titulo}</h3>
+                    </div>
+                    
+                    <div>
+                    {props.children.descripcion}
+                    </div>
+
+                    <div>
+                        <h5>Repositorio Github : </h5>                        
+                        <a target='_blank' href={props.children.github}> {props.children.github} </a>                       
+                    </div>
+
+
+                    {!props.children.pagina ? false : 
+                        <div>
+                            <h5>Ver Pagina : </h5>                        
+                            <a target='_blank' href={props.children.pagina}> {props.children.pagina} </a>                       
+                        </div>                                    
+                    }
+
                 </div>
 
 

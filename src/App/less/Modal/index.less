@@ -56,14 +56,43 @@
         }
 
         .modal_img{
-            width: 50%;
+            width: 60%;
             height: 100%;
+
+            img{
+                width: 100%;
+                height: 100%;
+            }
         }
 
         .modal_info{
-            overflow-y: auto;
-            width: 50%;
+            width: 40%;
             height: 100%;
+            overflow-y: auto;
+            div{
+                margin:20px 10px;
+
+                a{
+                    display: block;
+                    overflow-x: auto;
+                    overflow-y: auto;
+                    padding: 2px;
+                    font-size: 14px;                    
+                    color: blue;
+                    &:hover{
+                        color:rgb(125, 49, 196)
+                    }
+                }
+
+
+                h5{
+                    color:@blue;
+                    font-size: 18px;
+                    margin-top: 20px;
+                    margin-bottom: 5px;
+                    font-weight: bold;
+                }
+            }
         }
 
     }
@@ -72,17 +101,27 @@
 @media(max-width:800px){
     .modal_content{
         .modal{
+            width: 60%;
             
             .modal_img{
                 width: 100%;
-                height: 35%;
+                height: 45%;            
             }
 
             .modal_info{
                 width: 100%;
-                height: 65%;
+                height: 55%;
             }
 
+        }
+    }
+}
+
+@media(max-width:500px){
+    .modal_content{
+        .modal{
+            width: 80%;
+       
         }
     }
 }

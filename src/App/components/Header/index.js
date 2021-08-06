@@ -2,7 +2,7 @@ import React from 'react';
 import {useState,useEffect} from 'react';
 import { Link, animateScroll as scroll } from "react-scroll";
 
-import UserImg from '../../img/Img.png';
+import UserImg from '../../img/User.png';
 
 
 export default function Header(){
@@ -16,7 +16,7 @@ export default function Header(){
                 <div className='header_info' >
 
                     <div className='content_info'>
-                        <h1>Titulodas dasdasdasd</h1>
+                        <h1>Mi Portafolio</h1>
                         <p>
                             Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
                         </p>

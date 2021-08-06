@@ -9,8 +9,11 @@ export function PageLoader(){
 
     useEffect(()=>{        
         window.addEventListener('load',()=>{
-            Unshow(false)
+            Unshow(false)            
+                /*Por defecto el body esta en overflow hiddden para ocultar el scroll (Para el loader)y con esto lo habilito de nuevo */
+             document.getElementsByTagName('body')[0].style.overflowY = 'auto';
         })
+        
     },[])
 
 

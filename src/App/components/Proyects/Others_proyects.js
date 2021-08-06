@@ -1,5 +1,4 @@
 import React from 'react';
-import ImgUser from '../../img/Img.png';
 
 export default function OthersProyects (props){
 
@@ -26,11 +25,11 @@ export default function OthersProyects (props){
                         return(
                     <button key={key} className='item' onClick={()=>{props.Details('Others_proyects',obj.id)}}>
                         <div className='img_item'>
-                            <img src={ImgUser} draggable='false'></img>
+                            <img src={obj.img} draggable='false'></img>
                         </div>
                         <div className='info_item'>
-                            <h5>Result</h5>
-                            <p>dasodmasopdm</p>
+                            <h5>{obj.titulo}</h5>
+                            <p>{(obj.descripcion)}</p>
                         </div>
                     </button>
                         )
