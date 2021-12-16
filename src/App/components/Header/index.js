@@ -3,7 +3,7 @@ import {useState,useEffect} from 'react';
 import { Link, animateScroll as scroll } from "react-scroll";
 
 import UserImg from '../../img/User.png';
-
+import CV from '../../BenitezKevin.pdf';
 
 export default function Header(){
 
@@ -18,9 +18,9 @@ export default function Header(){
                     <div className='content_info'>
                         <h1>Mi Portafolio</h1>
                         <p>
-                            Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+                            Hola , mi nombre es Kevin ,tengo 19 años y soy de Entre Rios. Empecé ingenieria de sistemas en 2021 ,tengo conocimientos previos en algunos lenguajes de programacion web  y estoy ansioso por tener experiencia profesional
                         </p>
-                        <button>Dowload CV</button>
+                        <a dowload href={CV} target='_blank' >Descargar CV</a>
                     </div>
 
                     <div className='content_img'>
@@ -31,7 +31,7 @@ export default function Header(){
 
 
 
-            
+
 
 
         </header>
@@ -49,7 +49,7 @@ function Navbar(){
         }
 
         useEffect(()=>{
-            var Nav = document.getElementById('nav_content');            
+            var Nav = document.getElementById('nav_content');
 
             if(count){
                 Nav.classList.add('Nav_active');
@@ -95,7 +95,7 @@ function Navbar(){
 
 
                 {count?  <div onClick={(e)=>{navbar(false);buttonOff()}} className='opacity'></div> :false}
-                
+
 
             </nav>
         )

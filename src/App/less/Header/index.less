@@ -25,23 +25,25 @@
 
             p{
                 line-height: 25px;
-                margin-top: 0;
+                margin: 0px 5px;
                 font-weight:400;
                 font-size: 16px;
                 color: @dark;
 
             }
 
-            button{
+            a{
                 font-weight:500;
                 font-size: 20px;
                 margin-top: 10px;
-                width: 170px;
+                text-align: center;
+                width: 140px;
                 background-color: @red;
+                text-decoration: none;
                 padding: 10px 20px;
                 color: white;
                 border: none;
-                cursor: pointer;                
+                cursor: pointer;
 
                 transition: background 0.3s;
                 &:hover{
@@ -94,7 +96,7 @@
             color:@dark;
             font-family: @font;
             cursor: pointer;
-            position: relative;            
+            position: relative;
         }
 
         .active::after{
@@ -125,7 +127,7 @@
 
     min-height: 100vh;
     height: auto;
-    
+
     .header_info{
         flex-flow: column-reverse wrap-reverse;
         margin-top: 70px;
@@ -133,7 +135,7 @@
         .content_info{
             text-align: center;
             margin: auto;
-            
+
             button{
                 margin:20px auto;
             }
@@ -146,7 +148,7 @@
             margin: 10px auto;
         }
 
-        
+
     }
 }
 }
@@ -166,7 +168,7 @@
 
         .content{
             margin: 0px;
-            position: absolute;            
+            position: absolute;
             top: 100%;
             left: -100%;
             transition: 0.7s all ;
@@ -194,7 +196,7 @@
                 font-weight: 600;
                 font-size: 18px;
                 margin: 10px;
-            }            
+            }
         }
 
     }

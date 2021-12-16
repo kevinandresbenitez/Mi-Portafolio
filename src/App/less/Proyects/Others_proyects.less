@@ -15,7 +15,7 @@
         .content{
             width: 100%;
             .flex(row,wrap,space-around,center);
-            
+
             .item{
                 width: 100%;
                 text-align: left;
@@ -37,13 +37,16 @@
                 &:hover{
                     background: #fcf7f7;
                     box-shadow:  19px 19px 38px #ccc8c8,
-                                -19px -19px 38px #ffffff;      
+                                -19px -19px 38px #ffffff;
                 }
 
                 &:hover .img_item {
                     filter: contrast(50%);
                 }
 
+                &:hover .img_item::after {
+                  opacity: 1;
+                }
 
                 .img_item{
                     width: 100%;
@@ -71,13 +74,14 @@
                     transition: all 0.3s;
                     opacity: 0;
                 }
+
                 .img_item:hover::after{
                     opacity: 1;
                 }
 
-                
+
                 .info_item{
-                        margin: 10px 5px;                    
+                        margin: 10px 5px;
                     h5{
                         color:@blue;
                         font-size: 22px;
@@ -85,7 +89,7 @@
                         font-weight: bold;
                         margin: 0;
                     }
-                                       
+
                     p{
                         margin-top: 4px;
                         font-weight: 300;

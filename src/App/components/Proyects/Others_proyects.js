@@ -9,14 +9,14 @@ export default function OthersProyects (props){
                 <strong>OTROS PROYECTOS</strong>
                 <div></div>
             </div>
-            
+
             <h2>Otros Proyectos</h2>
 
 
             <div className='article_others_proyects'>
 
                 <div className='cont_text'>
-                        <p>A short blurb about a relevant hobby to design, career, or something work related that transferred to your job.</p>
+                        <p>Proyectos dedicados a el aprendizaje de conceptos como puede ser entender un framework o el uso de JWT</p>
                 </div>
 
                 <div className='content'>
@@ -38,12 +38,12 @@ export default function OthersProyects (props){
                 </div>
 
 
-                
+
             </div>
 
             <h3>Conocimientos</h3>
 
-            <div  className='Conocimientos'>        
+            <div  className='Conocimientos'>
 
             <div>
                 <h5>Front-End</h5>
@@ -74,7 +74,7 @@ export default function OthersProyects (props){
                 <ul>
                     <li>MongoDB</li>
                     <li>Mysql</li>
-                    <li>Postgres</li>                    
+                    <li>Postgres</li>
                 </ul>
 
             </div>
@@ -83,7 +83,7 @@ export default function OthersProyects (props){
 
             </div>
 
-            
+
 
 
 

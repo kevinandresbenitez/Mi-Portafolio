@@ -13,34 +13,29 @@ export default function Contact (){
                 </div>
 
                 <div className='cont_title'>
-                    <h2>Three word problem d</h2>
-                    <p>What were some interesting take aways from your project?</p>
+                    <h2>Contacto</h2>
+                    <p>Si llegaste hasta aqui y te gustaria contactarme , no lo dudes</p>
                 </div>
 
                 <div className='cont_links'>
                     <div className='link_item'>
-                        <h5>Item</h5>
-                        <p>Parrafo</p>
+                        <h5>Git hub</h5>
+                        <p>https://github.com/kevinandresbenitez</p>
                     </div>
 
                     <div className='link_item'>
-                        <h5>Item</h5>
-                        <p>Parrafo</p>
+                        <h5>Linkedin</h5>
+                        <p>https://www.linkedin.com/in/kevin-benitez-b41986209/</p>
                     </div>
 
                     <div className='link_item'>
-                        <h5>Item</h5>
-                        <p>Parrafo</p>
+                        <h5>Gmail</h5>
+                        <p>kevinescudoderoble@gmail.com</p>
                     </div>
 
                     <div className='link_item'>
-                        <h5>Item</h5>
-                        <p>Parrafo</p>
-                    </div>
-
-                    <div className='link_item'>
-                        <h5>Item</h5>
-                        <p>Parrafo</p>
+                        <h5>Numero</h5>
+                        <p>3454-110534</p>
                     </div>
 
                 </div>
@@ -49,8 +44,8 @@ export default function Contact (){
 
 
 
-            
-           
+
+
 
 
         </article>

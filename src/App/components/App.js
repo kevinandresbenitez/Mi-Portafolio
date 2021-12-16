@@ -7,6 +7,7 @@ import Modal from './Modal'
 import Proyects from './Proyects';
 import Others_proyects from './Proyects/Others_proyects.js';
 import Contact from './Contact';
+import ProgresBar from './ProgresBar';
 import Footer from './Footer';
 
 
@@ -72,7 +73,7 @@ export default function App (){
                 id : 3,
                 titulo:'Json Web Token',
                 img:'../img/Proyects/others_proyects/Json.png',
-                descripcion:'Blog de videojuegos creado con php sin seguir una metodologia ,es mi primer proyecto con php e hice el diseño en figma',
+                descripcion:'Aplicacion de autenticacion creada con react , json web token ,crea una api y verifica la session , tanto en la cabezera de la peticion como en una cookie',
             }
         ]
 
@@ -82,7 +83,7 @@ export default function App (){
         setShowDetails(false);
     }
 
-    const Details =(typeProyect,id)=>{        
+    const Details =(typeProyect,id)=>{
         let type = (`allProyect.${typeProyect}`);
         type = eval(type);
 
@@ -90,8 +91,8 @@ export default function App (){
             if(obj.id == id){
                 return (obj);
             }
-        }); 
-        
+        });
+
         if( typeProyect != Typedetails || (typeProyect == Typedetails && detailsProyects[0].id != details.id )  ){
             setDetails(detailsProyects[0]);
         }
@@ -108,12 +109,14 @@ export default function App (){
 
             <Header/>
             <PageLoader />
+
             <div id='proyects'>
                 <Proyects Details={Details}>{allProyect.first_proyects}</Proyects>
                 <Others_proyects Details={Details} >{allProyect.Others_proyects}</Others_proyects>
             </div>
 
             <Contact />
+            <ProgresBar />
             <Footer />
         </div>
     )
