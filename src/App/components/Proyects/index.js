@@ -1,10 +1,7 @@
 import React from 'react';
 
 
-
-
 export default function Proyects (props){
-
 
     return(
         <article  className='article'>

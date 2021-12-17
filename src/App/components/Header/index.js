@@ -20,7 +20,7 @@ export default function Header(){
                         <p>
                             Hola , mi nombre es Kevin ,tengo 19 años y soy de Entre Rios. Empecé ingenieria de sistemas en 2021 ,tengo conocimientos previos en algunos lenguajes de programacion web  y estoy ansioso por tener experiencia profesional
                         </p>
-                        <a dowload href={CV} target='_blank' >Descargar CV</a>
+                        <a dowload="true" href={CV} target='_blank' >Descargar CV</a>
                     </div>
 
                     <div className='content_img'>
