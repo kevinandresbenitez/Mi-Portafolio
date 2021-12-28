@@ -8,8 +8,8 @@ export default function Modal(props){
     const offDetails = ()=>{
 
         let modal = document.getElementById('modal');
-        modal.classList.remove('animate__fadeInUp');
-        modal.classList.add('animate__bounceOutDown');
+        modal.classList.remove('animate__fadeInDown');
+        modal.classList.add('animate__fadeOutDown');
 
         setTimeout(()=>{
             props.offDetails();
@@ -19,9 +19,9 @@ export default function Modal(props){
 
 
     return(
-                
+
         <div className='modal_content' >
-            <div className='modal  animate__animated animate__bounceInDown' id='modal'>
+            <div className='modal  animate__animated animate__fadeInDown' id='modal'>
                 <button className='close_button' onClick={()=>{offDetails()}} draggable='false'>
                     <FontAwesomeIcon icon={faTimes} size='lg' />
                 </button>
