@@ -63,13 +63,21 @@ module.exports ={
       },
 
     plugins: [new HtmlWebpackPlugin({
+        favicon: "./src/App/img/favicon.ico",
         template: __dirname + '/src/App/index.html'
-      })],
+      })
+    ],
 
-      devServer: {
+    devServer: {
         contentBase: path.join(__dirname, 'src/App/'),
         compress: true,
         port: 9000,
-      }
+      },
+
+    performance: {
+        hints: false,
+        maxEntrypointSize: 512000,
+        maxAssetSize: 512000
+    }
 
 }
