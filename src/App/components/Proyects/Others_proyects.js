@@ -71,6 +71,7 @@ export default function OthersProyects (props){
                     <li>Node (Express)</li>
                     <li>Sails</li>
                     <li>PHP</li>
+                    <li>Laravel</li>
                 </ul>
             </div>
 

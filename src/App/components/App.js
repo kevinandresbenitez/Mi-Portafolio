@@ -72,9 +72,33 @@ export default function App (){
             {
                 id : 3,
                 titulo:'Json Web Token',
+                github:'https://github.com/kevinandresbenitez/JsonWebToken',
                 img:'https://kevinandresbenitez.github.io/Almacen_imagenes/Mi-Portafolio/Json.png',
                 descripcion:'Aplicacion de autenticacion creada con react , json web token ,crea una api y verifica la session , tanto en la cabezera de la peticion como en una cookie',
-            }
+            },
+            {
+                id : 4,
+                titulo:'Game circle',
+                github:'https://github.com/kevinandresbenitez/Game-Circle',
+                pagina:'https://kevinandresbenitez.github.io/Game-Circle/',
+                img:'https://kevinandresbenitez.github.io/Almacen_imagenes/Mi-Portafolio/GameCircle.png',
+                descripcion:'Un juego sencillo en el que se tienen que eliminar los bloques , me parecio muy interesante el sistema de coliciones con los bloques y paredes',
+            },
+            {
+                id : 5,
+                titulo:'Instagram',
+                github:'https://github.com/kevinandresbenitez/Instagram',
+                img:'https://kevinandresbenitez.github.io/Almacen_imagenes/Mi-Portafolio/Instagram.png',
+                descripcion:'Apliacion similar a instagram, se pueden crear publicaciones,comentar,dar like , eliminar, bucar usuarios.Aplicacion creada con laravel , un framework de PHP para entornos MVC , Maquetado con boostrap y less para las trancisiones',
+            },
+            {
+                id : 6,
+                titulo:'Juego de Plataformas',
+                github:'https://github.com/kevinandresbenitez/Plataform-Game',
+                img:'https://kevinandresbenitez.github.io/Almacen_imagenes/Mi-Portafolio/GamePlataformer.png',
+                descripcion:'Un juego de plataformas creado con js(Esta en desarrollo) , me parecia muy interesante crear un juego con matrizes , asi que lo hice , aunque solo es para aprender , me gustaria seguir aportando',
+            },
+
         ]
 
     }

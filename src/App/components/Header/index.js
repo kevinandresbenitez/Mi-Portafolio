@@ -18,7 +18,7 @@ export default function Header(){
                     <div className='content_info'>
                         <h1>Mi Portafolio</h1>
                         <p>
-                            Hola , mi nombre es Kevin ,tengo 19 años y soy de Entre Rios. Empecé ingenieria de sistemas en 2021 ,tengo conocimientos previos en algunos lenguajes de programacion web  y estoy ansioso por tener experiencia profesional
+                            Hola , mi nombre es Kevin ,tengo 20 años y soy de Entre Rios. Empecé la Licenciatura en sistemas en 2022 , aprendi desarrollo web previamente y me certifique tanto en el back-end como en el front-end , desarrollo aplicaciones y aprendo por mi cuenta lo que me interesa o me da curiosidad aprender.
                         </p>
                         <a dowload="true" href={CV} target='_blank' >Descargar CV</a>
                     </div>
