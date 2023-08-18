@@ -3,7 +3,7 @@ import {useState,useEffect} from 'react';
 import { Link, animateScroll as scroll } from "react-scroll";
 
 import UserImg from '../../img/User.png';
-import CV from '../../BenitezKevin.pdf';
+import CV from '../../../BenitezKevin.pdf';
 
 export default function Header(){
 
