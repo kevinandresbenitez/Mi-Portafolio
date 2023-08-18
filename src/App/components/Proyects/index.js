@@ -1,44 +1,50 @@
-import React from 'react';
+import MainProyects from "./Main_proyects";
+import OthersProyects from "./Others_proyects";
+import Modal from '../../components/Modal'
+import MisProyectos from '../../../Proyectos';
+import {useState} from 'react';
+import React from 'react'
+
+export default function Proyects(){
+
+    const[Showdetails,setShowDetails] = useState(false);
+    const[details,setDetails] = useState(false);
+    const[Typedetails,setTypedetails] = useState();
 
 
-export default function Proyects (props){
+    const allProyect = MisProyectos;
+
+    const offDetails=()=>{
+        setShowDetails(false);
+    }
+
+    const Details =(typeProyect,id)=>{
+        let type = (`allProyect.${typeProyect}`);
+        type = eval(type);
+
+        var detailsProyects = type.filter((obj,key)=>{
+            if(obj.id == id){
+                return (obj);
+            }
+        });
+
+        if( typeProyect != Typedetails || (typeProyect == Typedetails && detailsProyects[0].id != details.id )  ){
+            setDetails(detailsProyects[0]);
+        }
+        setShowDetails(true);
+        setTypedetails(typeProyect);
+    }
+
+
+
+
+
 
     return(
-        <article  className='article'>
-
-            <div className='article_header_info'>
-                <strong>PROYECTOS</strong>
-                <div></div>
-            </div>
-
-            <h2 >Mis Proyectos</h2>
-            <div className='item'></div>
-
-            <div className='article_proyects' >
-
-                <div className='cont_text'>
-                    <p>Estos son algunos de los proyectos mas interesantes que tengo , desde una aplicacion de busqueda de lugares con react hasta una tienda con PHP</p>
-                    <h5>Tambien</h5>
-                    <p>Puedes ver varios proyectos en mi repositorio GithUb ubicado en el apartado de contactos :)</p>
-                </div>
-
-                <div className='cont_img'>
-
-                    {props.children.map((obj,key)=>{
-                        return(
-                            <button className='item'  key={key} onClick={()=>{props.Details('first_proyects',obj.id)}}>
-                                <img src={obj.img} draggable='false' />
-                            </button>
-                        )
-                    })}
-
-                </div>
-
-            </div>
-
-        </article>
-
+        <div id='proyects'>
+            {Showdetails && details ? <Modal offDetails={offDetails}>{details}</Modal>:false}
+            <MainProyects Details={Details}>{allProyect.first_proyects}</MainProyects>
+            <OthersProyects Details={Details} >{allProyect.Others_proyects}</OthersProyects>
+        </div>
     )
-
-
 }
