@@ -5,9 +5,9 @@ export default {
             id : 1,
             img:'https://kevinandresbenitez.github.io/Almacen_imagenes/Mi-Portafolio/Pelicula.png',
             titulo:'Peliculas',
-            descripcion:'Aplicacion de peliculas creada con react y una Api ,para buscar informacion sobre peliculas',
-            github:'https://github.com/kevinandresbenitez/Pelis_react',
-            pagina:'https://kevinandresbenitez.github.io/Pelis_react/'
+            descripcion:'Aplicacion de peliculas creada con react y una Api. La aplicacion puede buscar informacion sobre peliculas y series',
+            github:'https://github.com/kevinandresbenitez/Peliculas_React',
+            pagina:'https://kevinandresbenitez.github.io/Peliculas_React/'
         },
         {
             id : 2,
